@@ -1,4 +1,4 @@
-package BaseDatos;
+package com.example.concesionario.basedatos;
 
 import java.sql.Connection;
 import java.sql.DriverManager;

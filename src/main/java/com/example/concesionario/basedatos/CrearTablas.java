@@ -1,4 +1,4 @@
-package BaseDatos;
+package com.example.concesionario.basedatos;
 
 import java.sql.Connection;
 import java.sql.SQLException;
@@ -10,7 +10,8 @@ public class CrearTablas {
 
         String login  = """
                         CREATE TABLE login (
-                        user TEXT NOT NULL PRIMARY KEY,
+                        id INTEGER PRIMARY KEY AUTOINCREMENT,
+                        username TEXT NOT NULL UNIQUE,
                         password TEXT NOT NULL);
                 """;
 
