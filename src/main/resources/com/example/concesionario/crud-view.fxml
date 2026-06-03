@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="452.0" prefWidth="600.0"
+      xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.concesionario.Controllers.CrudController"
+      stylesheets="@css/Concesionario.css">
+    <Label text="Concesionario" styleClass="label-titulo">
+        <font>
+            <Font name="SimSun" size="45.0" />
+        </font>
+    </Label>
+    <Label fx:id="lblError" styleClass="label-error"/>
+    <VBox prefHeight="96.0" prefWidth="600.0">
+        <children>
+            <Label prefHeight="17.0" prefWidth="90.0" text="Añadir coche" />
+            <TextField fx:id="txtBastidor" promptText="ID" />
+            <TextField fx:id="txtMarca" prefHeight="9.0" prefWidth="600.0" promptText="Nombre Marca" />
+            <DatePicker fx:id="dpAnno" prefHeight="28.0" prefWidth="600.0" promptText="Año " />
+            <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Añadir" />
+        </children>
+    </VBox>
+    <VBox prefHeight="68.0" prefWidth="600.0">
+        <children>
+            <Label text="Eliminar  Coche" />
+            <TextField fx:id="txtBastidor3" promptText="ID" />
+            <Button mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Eliminar" />
+        </children>
+    </VBox>
+    <VBox prefHeight="144.0" prefWidth="600.0">
+        <children>
+            <Label text="Actualizar Coche" />
+            <TextField fx:id="txtBastidor2" promptText="ID" />
+            <TextField fx:id="txtMarca2" promptText="Marca" />
+            <DatePicker fx:id="dpAnno2" promptText="Año" />
+            <Button mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Actualizar" />
+        </children>
+    </VBox>
+    <Button mnemonicParsing="false" onAction="#onVerListaButtonClick" text="Ver Lista" />
+    <Button mnemonicParsing="false" onAction="#onSalirButtonClick" text="Salir" />
+</VBox>

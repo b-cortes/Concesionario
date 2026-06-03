@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.concesionario.Controllers.LoginController"
+      stylesheets="@css/Concesionario.css">
+    <Label text="Login" styleClass="label-titulo">
+        <font>
+            <Font name="SimSun" size="45.0" />
+        </font>
+    </Label>
+    <TextField fx:id="txtUser" layoutX="176.0" layoutY="153.0" prefHeight="25.0" prefWidth="525.0" promptText="Usuario" />
+    <PasswordField fx:id="txtPassword" layoutX="177.0" layoutY="188.0" prefHeight="25.0" prefWidth="259.0" promptText="Contraeña" />
+    <Button layoutX="281.0" layoutY="242.0" mnemonicParsing="false" onAction="#onLoginButtonClick" text="Entrar" />
+    <Button layoutX="286.0" layoutY="309.0" mnemonicParsing="false" onAction="#onSalirButtonClick" text="Salir" />
+    <Label fx:id="lblError" styleClass="label-error"/>
+</VBox>

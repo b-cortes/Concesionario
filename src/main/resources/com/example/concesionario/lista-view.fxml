@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox alignment="TOP_CENTER"
+      spacing="10"
+      prefHeight="400.0"
+      prefWidth="600.0"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.concesionario.Controllers.ListaController"
+      stylesheets="@css/Concesionario.css">
+    <Label text="Lista de Coches" styleClass="label-titulo">
+        <font>
+            <Font size="30.0"/>
+        </font>
+    </Label>
+
+    <TableView fx:id="tablaCoches"
+               prefHeight="300"
+               prefWidth="550">
+
+        <columns>
+
+            <TableColumn fx:id="colBastidor"
+                         text="Nº Bastidor"
+                         prefWidth="180"/>
+
+            <TableColumn fx:id="colMarca"
+                         text="Marca"
+                         prefWidth="180"/>
+
+            <TableColumn fx:id="colAnno"
+                         text="Año"
+                         prefWidth="180"/>
+
+        </columns>
+
+    </TableView>
+
+    <Button text="Volver"
+            onAction="#onVolverButtonClick"/>
+
+</VBox>
