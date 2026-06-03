@@ -25,7 +25,7 @@ public class CrearTablas {
                                numBastidor NUMBER NOT NULL PRIMARY KEY,
                                marca TEXT NOT NULL,
                                anno DATE NOT NULL
-                               ); 
+                               );
                  """;
         try (Statement statement = connection.createStatement()) {
             statement.executeUpdate(concesionario);

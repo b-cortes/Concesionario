@@ -1,8 +1,8 @@
-package dao.Impl;
+package com.example.concesionario.dao.Impl;
 
 import BaseDatos.Conexion;
-import dao.UsuarioDAO;
-import model.Usuario;
+import com.example.concesionario.dao.UsuarioDAO;
+import com.example.concesionario.model.Usuario;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,24 +10,28 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UsuarioDAOImpl implements UsuarioDAO{
-    Connection connection = Conexion.getInstance();
+    private Connection connection;
+
+    public UsuarioDAOImpl(Connection connection) {
+        this.connection = connection;
+    }
 
     @Override
-    public Usuario login(String username, String password) {
+    public Usuario login(String user, String password) {
 
         String sql = """
                 SELECT * FROM login
-                WHERE username = ? AND password = ?;
+                WHERE user = ? AND password = ?;
                 """;
         try (
                 PreparedStatement pState = connection.prepareStatement(sql);
         ) {
-            pState.setString(1, username);
+            pState.setString(1, user);
             pState.setString(2, password);
 
             ResultSet resultSet = pState.executeQuery();
             if (resultSet.next()) {
-                return new Usuario(resultSet.getString("username"), resultSet.getString("password"));
+                return new Usuario(resultSet.getString("user"), resultSet.getString("password"));
             }
 
         } catch (SQLException e) {
@@ -44,7 +48,7 @@ public class UsuarioDAOImpl implements UsuarioDAO{
                 INSERT INTO login VALUES (?,?);
                     """;
         try (PreparedStatement preparedStatement = connection.prepareStatement(sql) ) {
-            preparedStatement.setString(1, usuario.getUsername());
+            preparedStatement.setString(1, usuario.getUser());
             preparedStatement.setString(2, usuario.getPassword());
             preparedStatement.executeUpdate();
         } catch (SQLException e) {

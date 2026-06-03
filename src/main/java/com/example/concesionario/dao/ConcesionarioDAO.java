@@ -1,6 +1,6 @@
-package dao;
+package com.example.concesionario.dao;
 
-import model.Concesionario;
+import com.example.concesionario.model.Concesionario;
 
 import java.util.List;
 

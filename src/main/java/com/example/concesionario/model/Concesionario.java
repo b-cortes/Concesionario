@@ -1,4 +1,4 @@
-package model;
+package com.example.concesionario.model;
 
 import java.time.LocalDate;
 

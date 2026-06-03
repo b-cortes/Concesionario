@@ -1,8 +1,8 @@
-package dao.Impl;
+package com.example.concesionario.dao.Impl;
 
 import BaseDatos.Conexion;
-import dao.ConcesionarioDAO;
-import model.Concesionario;
+import com.example.concesionario.dao.ConcesionarioDAO;
+import com.example.concesionario.model.Concesionario;
 
 import java.sql.*;
 import java.time.LocalDate;

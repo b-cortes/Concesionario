@@ -1,7 +1,8 @@
-package Controllers;
+package com.example.concesionario.Controllers;
 
-import dao.ConcesionarioDAO;
-import dao.Impl.ConcesionarioDAOImp;
+import com.example.concesionario.LoginAplication;
+import com.example.concesionario.dao.ConcesionarioDAO;
+import com.example.concesionario.dao.Impl.ConcesionarioDAOImp;
 import javafx.application.Platform;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -11,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-import model.Concesionario;
+import com.example.concesionario.model.Concesionario;
 
 import java.io.IOException;
 import java.time.LocalDate;

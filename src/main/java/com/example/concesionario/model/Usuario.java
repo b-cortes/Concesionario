@@ -1,12 +1,12 @@
-package model;
+package com.example.concesionario.model;
 
 public class Usuario {
     private String id;
-    private String username;
+    private String user;
     private String password;
 
-    public Usuario(String username, String password) {
-        this.username = username;
+    public Usuario(String user, String password) {
+        this.user = user;
         this.password = password;
     }
 
@@ -18,12 +18,12 @@ public class Usuario {
         this.password = password;
     }
 
-    public String getUsername() {
-        return username;
+    public String getUser() {
+        return user;
     }
 
-    public void setUsername(String username) {
-        this.username = username;
+    public void setUser(String username) {
+        this.user = username;
     }
 
     public String getId() {
