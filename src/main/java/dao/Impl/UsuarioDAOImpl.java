@@ -9,7 +9,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class UsuarioDAOImpl {
+public class UsuarioDAOImpl implements UsuarioDAO{
     Connection connection = Conexion.getInstance();
 
     @Override

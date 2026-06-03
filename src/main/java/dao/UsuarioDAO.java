@@ -5,7 +5,6 @@ import model.Usuario;
 
 public interface UsuarioDAO {
     Usuario login(String username, String password);
-
     public void insertar (Usuario usuario);
 
 
