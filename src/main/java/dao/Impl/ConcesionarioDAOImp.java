@@ -1,7 +1,7 @@
 package dao.Impl;
 
 import BaseDatos.Conexion;
-import dao.ConcesonarioDAO;
+import dao.ConcesionarioDAO;
 import model.Concesionario;
 
 import java.sql.*;
@@ -9,7 +9,7 @@ import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ConcesionarioDAOImp implements ConcesonarioDAO {
+public class ConcesionarioDAOImp implements ConcesionarioDAO {
     Connection conn = Conexion.getInstance();
 
     @Override
