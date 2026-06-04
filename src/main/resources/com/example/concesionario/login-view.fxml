@@ -1,21 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12"
+<VBox alignment="CENTER"
+      spacing="12"
+      fillWidth="true"
+      stylesheets="@css/Concesionario.css"
+      xmlns="http://javafx.com/javafx/17.0.12"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.example.concesionario.Controllers.LoginController"
-      stylesheets="@css/Concesionario.css">
+      fx:controller="com.example.concesionario.Controllers.LoginController">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
     <Label text="Login" styleClass="label-titulo">
         <font>
             <Font name="SimSun" size="45.0" />
         </font>
     </Label>
-    <TextField fx:id="txtUser" layoutX="176.0" layoutY="153.0" prefHeight="25.0" prefWidth="525.0" promptText="Usuario" />
-    <PasswordField fx:id="txtPassword" layoutX="177.0" layoutY="188.0" prefHeight="25.0" prefWidth="259.0" promptText="Contraeña" />
-    <Button layoutX="281.0" layoutY="242.0" mnemonicParsing="false" onAction="#onLoginButtonClick" text="Entrar" />
-    <Button layoutX="286.0" layoutY="309.0" mnemonicParsing="false" onAction="#onSalirButtonClick" text="Salir" />
-    <Label fx:id="lblError" styleClass="label-error"/>
+
+    <TextField fx:id="txtUser"
+               promptText="Usuario"
+               maxWidth="Infinity" />
+
+    <PasswordField fx:id="txtPassword"
+                   promptText="Contraseña"
+                   maxWidth="Infinity" />
+
+    <Button text="Entrar"
+            onAction="#onLoginButtonClick"
+            maxWidth="Infinity" />
+
+    <Button text="Salir"
+            onAction="#onSalirButtonClick"
+            maxWidth="Infinity" />
+
+    <Label fx:id="lblError"
+           styleClass="label-error" />
+
 </VBox>

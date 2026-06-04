@@ -79,6 +79,7 @@ public class LoginController implements Initializable {
         Usuario loggedUser = usuarioDAO.login(user, pass);
 
         if (loggedUser != null) {
+            com.example.concesionario.Sesion.iniciar(loggedUser);
 
             // Autenticación exitosa: se limpia cualquier error previo y se cambia de pantalla
             cambiarEscena(event, "/com/example/concesionario/crud-view.fxml");

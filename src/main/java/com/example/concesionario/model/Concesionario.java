@@ -14,6 +14,7 @@ public class Concesionario {
     private int numBastidor;
     private String marca;
     private LocalDate anno; //Utilizamos LocalDate para un manejo más preciso de las fechas
+    private String userid;
 
     /**
      * Constructor completo para registrar un vehículo con todos sus datos.
@@ -92,5 +93,18 @@ public class Concesionario {
 
     public void setAnno(LocalDate anno) {
         this.anno = anno;
+    }
+
+
+    /**
+     * Obtiene el identificador del usuario del coche
+     * @return Identificador del usuario del coche
+     */
+    public String getUserid() {
+        return userid;
+    }
+
+    public void setUserid(String userid) {
+        this.userid = userid;
     }
 }
