@@ -1,20 +1,43 @@
-package com.example.concesionario;
+    package com.example.concesionario;
 
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
+    import javafx.application.Application;
+    import javafx.fxml.FXMLLoader;
+    import javafx.scene.Scene;
+    import javafx.stage.Stage;
 
-import java.io.IOException;
+    import java.io.IOException;
 
-public class LoginAplication extends Application {
 
-    @Override
-    public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(LoginAplication.class.getResource("login-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 500, 500);
-        stage.setTitle("Concesionario de Brian y Juan");
-        stage.setScene(scene);
-        stage.show();
+    /**
+     * Clase de aplicación principal del sistema del concesionario.
+     * Se encarga de inicializar el entorno de ejecución de JavaFX, preparar el escenario,
+     * y desplegar la pantalla inicial de inicio de sesiónn (login).
+     * @author Brian
+     * @version 1.0
+     */
+    public class LoginAplication extends Application {
+
+
+        /**
+         * Punto de arranque del ciclo de vida de la interfaz de JavaFX.
+         * Carga la vista FXML del login, define las dimensiones de la escena y muestra la ventana.
+         * @param stage El escenario principal (ventana) provisto por la plataforma-
+         * @throws IOException Si ocurre un error al intentar leer o cargar el archivo 'login.view.fxml'
+         */
+        @Override
+        public void start(Stage stage) throws IOException {
+
+            // Inicializa el cargador apuntando el archivo FXML de la vista de inicio de sesión
+            FXMLLoader fxmlLoader = new FXMLLoader(LoginAplication.class.getResource("login-view.fxml"));
+
+            // Crea la escena cargando los componentes visuales del FXML y fijando un tamaño
+            Scene scene = new Scene(fxmlLoader.load(), 500, 500);
+
+            // Configura los metadatos de la ventana principal
+            stage.setTitle("Concesionario de Brian y Juan"); // Título personalizado de la app
+            stage.setScene(scene); // Asigna la escena al escenario
+
+            //Hace visible la ventana para el usuario
+            stage.show();
+        }
     }
-}
