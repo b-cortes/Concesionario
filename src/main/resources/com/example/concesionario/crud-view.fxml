@@ -4,22 +4,18 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER" prefHeight="452.0" prefWidth="600.0"
-      xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.example.concesionario.Controllers.CrudController"
-      stylesheets="@css/Concesionario.css">
-    <Label text="Concesionario" styleClass="label-titulo">
+<VBox alignment="TOP_CENTER" prefHeight="452.0" prefWidth="600.0" stylesheets="@css/Concesionario.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.concesionario.Controllers.CrudController">
+    <Label styleClass="label-titulo" text="Concesionario">
         <font>
             <Font name="SimSun" size="45.0" />
         </font>
     </Label>
-    <Label fx:id="lblError" styleClass="label-error"/>
+    <Label fx:id="lblError" styleClass="label-error" />
     <VBox prefHeight="96.0" prefWidth="600.0">
         <children>
             <Label prefHeight="17.0" prefWidth="90.0" text="Añadir coche" />
-            <TextField fx:id="txtBastidor" promptText="ID" />
             <TextField fx:id="txtMarca" prefHeight="9.0" prefWidth="600.0" promptText="Nombre Marca" />
-            <DatePicker fx:id="dpAnno" prefHeight="28.0" prefWidth="600.0" promptText="Año " />
+            <DatePicker fx:id="dpAnno" prefHeight="50.0" prefWidth="193.0" promptText="Año " />
             <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Añadir" />
         </children>
     </VBox>

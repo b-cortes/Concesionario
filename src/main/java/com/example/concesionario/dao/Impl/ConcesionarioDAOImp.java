@@ -12,11 +12,38 @@ import java.util.List;
 public class ConcesionarioDAOImp implements ConcesionarioDAO {
     Connection conn = Conexion.getInstance();
 
+    public static int idAuto() {
+
+        Connection connection = Conexion.getInstance();
+
+        int j = 0;
+        String sql = "SELECT numBastidor FROM concesionario";
+
+        try (Statement st = connection.createStatement()) {
+            ResultSet rSt = st.executeQuery(sql);
+            while (rSt.next()) {
+                int x = rSt.getInt(1);
+                for (; j < 2147483646;) {
+                    if (j != x) {
+                        return j;
+                    }
+                    break;
+                }
+                j++;
+            }
+        }  catch (SQLException e){
+            System.out.println(e);
+        }
+
+        return j;
+
+    }
+
     @Override
     public boolean addCoche(Concesionario coche) {
         String sql = "INSERT INTO concesionario VALUES (?, ?, ?)";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
-            pstmt.setInt(1, coche.getNumBastidor());
+            pstmt.setInt(1, idAuto());
             pstmt.setString(2, coche.getMarca());
             pstmt.setString(3, coche.getAnno().toString());
             pstmt.executeUpdate();

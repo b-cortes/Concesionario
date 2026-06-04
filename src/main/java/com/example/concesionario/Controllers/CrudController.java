@@ -1,5 +1,6 @@
 package com.example.concesionario.Controllers;
 
+import BaseDatos.Conexion;
 import com.example.concesionario.LoginAplication;
 import com.example.concesionario.dao.ConcesionarioDAO;
 import com.example.concesionario.dao.Impl.ConcesionarioDAOImp;
@@ -15,20 +16,19 @@ import javafx.stage.Stage;
 import com.example.concesionario.model.Concesionario;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.time.LocalDate;
 
 public class CrudController {
-    @FXML
-    private TextField txtBastidor;
     @FXML private TextField txtMarca;
-    @FXML
-    private DatePicker dpAnno;
+    @FXML private DatePicker dpAnno;
     @FXML private TextField txtBastidor2;
     @FXML private TextField txtMarca2;
-    @FXML
-    private DatePicker dpAnno2;
+    @FXML private DatePicker dpAnno2;
     @FXML private TextField txtBastidor3;
-
 
     ConcesionarioDAO cocheDAO = new ConcesionarioDAOImp();
 
@@ -36,21 +36,17 @@ public class CrudController {
     protected void onAddButtonClick() {
 
         try {
-
-            int numBastidor = Integer.parseInt(txtBastidor.getText());
-
             String marca = txtMarca.getText();
 
             LocalDate anno = dpAnno.getValue();
 
-            Concesionario coche =
-                    new Concesionario(numBastidor, marca, anno);
+            Concesionario coche = new Concesionario(marca, anno);
 
             cocheDAO.addCoche(coche);
 
         } catch (NumberFormatException e) {
 
-            System.out.println("El número de bastidor debe ser un entero");
+            System.err.println(e);
 
         }
     }
@@ -81,12 +77,9 @@ public class CrudController {
     }
 
     private void limpiarCampos() {
-        txtBastidor.clear();
         txtMarca.clear();
         dpAnno.setValue(null);
     }
-
-    // Copiar el método cambiarEscena del LoginController aquí
 
     private void cambiarEscena(ActionEvent event, String fxmlFile) {
         try {
