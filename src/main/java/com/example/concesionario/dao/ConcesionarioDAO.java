@@ -42,4 +42,6 @@ public interface ConcesionarioDAO {
      * Si no hay registros, devolverá una lista vacía.
      */
     List<Concesionario> getAllCoches();
+
+    List<Concesionario> getCochesByUserId(String userId);
 }

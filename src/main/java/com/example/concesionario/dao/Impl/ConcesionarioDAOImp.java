@@ -138,10 +138,33 @@ public class ConcesionarioDAOImp implements ConcesionarioDAO {
                         rs.getString("marca"),
                         LocalDate.parse(rs.getString("anno")) // Conversión de String a LocalDate
                 );
+                c.setUserid(rs.getString("userid"));
                 coches.add(c);
             }
         } catch (SQLException e) {
             System.err.println(e);;
+        }
+        return coches;
+    }
+
+    @Override
+    public List<Concesionario> getCochesByUserId(String userId) {
+        List<Concesionario> coches = new ArrayList<>();
+        String sql = "SELECT * FROM concesionario WHERE userid = ?";
+        try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, userId);
+            ResultSet rs = pstmt.executeQuery();
+            while (rs.next()) {
+                Concesionario c = new Concesionario(
+                        rs.getInt("numBastidor"),
+                        rs.getString("marca"),
+                        LocalDate.parse(rs.getString("anno"))
+                );
+                c.setUserid(rs.getString("userid"));
+                coches.add(c);
+            }
+        } catch (SQLException e) {
+            System.err.println(e);
         }
         return coches;
     }
