@@ -30,7 +30,6 @@
             <Insets top="10" right="10" bottom="10" left="10"/>
         </padding>
         <Label text="Añadir coche" />
-        <TextField fx:id="txtBastidor" promptText="ID" maxWidth="Infinity" />
         <TextField fx:id="txtMarca" promptText="Nombre Marca" maxWidth="Infinity" />
         <DatePicker fx:id="dpAnno" promptText="Año" maxWidth="Infinity" />
         <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Añadir" maxWidth="Infinity" />
