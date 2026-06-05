@@ -3,9 +3,11 @@
     import javafx.application.Application;
     import javafx.fxml.FXMLLoader;
     import javafx.scene.Scene;
+    import javafx.scene.image.Image;
     import javafx.stage.Stage;
 
     import java.io.IOException;
+    import java.util.Objects;
 
 
     /**
@@ -34,8 +36,11 @@
             Scene scene = new Scene(fxmlLoader.load(), 500, 500);
 
             // Configura los metadatos de la ventana principal
-            stage.setTitle("Concesionario de Brian y Juan"); // Título personalizado de la app
+            stage.setTitle("Aura Motors"); // Título personalizado de la app
             stage.setScene(scene); // Asigna la escena al escenario
+
+            //Cargamos el logo del conesionario
+            stage.getIcons().add(new Image(Objects.requireNonNull(getClass().getResourceAsStream("Images/Aura_Motors_Logo.png"))));
 
             //Hace visible la ventana para el usuario
             stage.show();

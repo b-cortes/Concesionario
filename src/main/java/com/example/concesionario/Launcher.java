@@ -17,7 +17,7 @@ public class Launcher {
 
     public static void main(String[] args) {
 
-        // Lanza la aplicación JavaFX especificando que la vista inicial será gestionadaz
+        // Lanza la aplicación JavaFX especificando que la vista inicial será gestionada
         Application.launch(LoginAplication.class, args);
     }
 }
