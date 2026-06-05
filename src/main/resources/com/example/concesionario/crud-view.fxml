@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER" fillWidth="true" spacing="12" stylesheets="@css/Concesionario.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.concesionario.Controllers.CrudController">
+
+    <padding>
+        <Insets bottom="30" left="30" right="30" top="30" />
+    </padding>
+
+    <Label styleClass="label-titulo" text="Concesionario">
+        <font>
+            <Font name="SimSun" size="45.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="lblError" styleClass="label-error" />
+
+    <VBox fillWidth="true" spacing="8" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <Label text="Añadir coche" />
+        <TextField fx:id="txtMarca" maxWidth="Infinity" promptText="Nombre Marca" />
+        <DatePicker fx:id="dpAnno" maxWidth="Infinity" promptText="Año" />
+        <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onAddButtonClick" text="Añadir" />
+    </VBox>
+
+    <VBox fillWidth="true" spacing="8" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <Label text="Eliminar Coche" />
+        <TextField fx:id="txtBastidor3" maxWidth="Infinity" promptText="ID" />
+        <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Eliminar" />
+    </VBox>
+
+    <VBox fillWidth="true" spacing="8" VBox.vgrow="ALWAYS">
+        <padding>
+            <Insets bottom="10" left="10" right="10" top="10" />
+        </padding>
+        <Label text="Actualizar Coche" />
+        <TextField fx:id="txtBastidor2" maxWidth="Infinity" promptText="ID" />
+        <TextField fx:id="txtMarca2" maxWidth="Infinity" promptText="Marca" />
+        <DatePicker fx:id="dpAnno2" maxWidth="Infinity" promptText="Año" />
+        <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Actualizar" />
+    </VBox>
+
+    <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onVerListaButtonClick" text="Ver Lista" />
+    <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onSalirButtonClick" text="Salir" />
+
+</VBox>

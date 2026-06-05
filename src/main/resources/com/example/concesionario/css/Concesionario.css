@@ -1,0 +1,114 @@
+.root {
+    -fx-background-color: linear-gradient(to bottom, #1a1a1a, #2d2d2d);
+    -fx-font-family: "Segoe UI";
+}
+
+/* ===== TITULOS ===== */
+
+.label {
+    -fx-text-fill: white;
+}
+
+.label-titulo {
+    -fx-text-fill: white;
+    -fx-font-size: 34px;
+    -fx-font-weight: bold;
+}
+
+.label-error {
+    -fx-text-fill: #ff4d4d;
+    -fx-font-weight: bold;
+}
+
+/* ===== CAJAS ===== */
+
+.vbox {
+    -fx-spacing: 10;
+    -fx-padding: 10;
+}
+
+/* ===== TEXTFIELDS ===== */
+
+.text-field,
+.password-field,
+.date-picker {
+    -fx-background-color: #3a3a3a;
+    -fx-text-fill: white;
+    -fx-prompt-text-fill: #b0b0b0;
+
+    -fx-border-color: #0078D7;
+    -fx-border-radius: 8;
+    -fx-background-radius: 8;
+
+    -fx-padding: 8;
+}
+
+.text-field:focused,
+.password-field:focused,
+.date-picker:focused {
+    -fx-border-color: #00aaff;
+    -fx-border-width: 2;
+}
+
+/* ===== BOTONES ===== */
+
+.button {
+    -fx-background-color: #0078D7;
+    -fx-text-fill: white;
+
+    -fx-font-weight: bold;
+
+    -fx-background-radius: 10;
+    -fx-cursor: hand;
+
+    -fx-padding: 10 20 10 20;
+}
+
+.button:hover {
+    -fx-background-color: #0099ff;
+}
+
+.button:pressed {
+    -fx-background-color: #005fa3;
+}
+
+/* ===== TABLAS ===== */
+
+.table-view {
+    -fx-background-color: #2f2f2f;
+    -fx-border-color: #0078D7;
+    -fx-border-radius: 10;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: #0078D7;
+}
+
+.table-view .column-header,
+.table-view .filler {
+    -fx-background-color: #0078D7;
+}
+
+.table-view .column-header .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.table-row-cell {
+    -fx-background-color: #2f2f2f;
+    -fx-text-background-color: white;
+}
+
+.table-row-cell:selected {
+    -fx-background-color: #005fa3;
+}
+
+/* ===== DATEPICKER ===== */
+
+.date-picker .arrow-button {
+    -fx-background-color: #0078D7;
+}
+
+.date-picker .arrow-button:hover {
+    -fx-background-color: #0099ff;
+}

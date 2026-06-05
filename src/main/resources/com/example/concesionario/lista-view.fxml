@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="TOP_CENTER"
+      spacing="12"
+      fillWidth="true"
+      stylesheets="@css/Concesionario.css"
+      xmlns="http://javafx.com/javafx/17.0.12"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.concesionario.Controllers.ListaController">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
+
+    <Label text="Lista de Coches" styleClass="label-titulo">
+        <font>
+            <Font size="30.0"/>
+        </font>
+    </Label>
+
+    <TableView fx:id="tablaCoches"
+               maxWidth="Infinity"
+               maxHeight="Infinity"
+               VBox.vgrow="ALWAYS">
+
+        <columns>
+            <TableColumn fx:id="colBastidor"
+                         text="Nº Bastidor"
+                         prefWidth="180"/>
+            <TableColumn fx:id="colMarca"
+                         text="Marca"
+                         prefWidth="180"/>
+            <TableColumn fx:id="colAnno"
+                         text="Año"
+                         prefWidth="180"/>
+        </columns>
+
+    </TableView>
+
+    <Button text="Volver"
+            onAction="#onVolverButtonClick"
+            maxWidth="Infinity" />
+
+</VBox>
