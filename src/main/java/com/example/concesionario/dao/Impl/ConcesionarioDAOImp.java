@@ -64,12 +64,13 @@ public class ConcesionarioDAOImp implements ConcesionarioDAO {
 
     @Override
     public boolean addCoche(Concesionario coche) {
-        String sql = "INSERT INTO concesionario VALUES (?, ?, ?)";
+        String sql = "INSERT INTO concesionario VALUES (?, ?, ?, ?)";
         try (PreparedStatement pstmt = conn.prepareStatement(sql)) {
             //Asignación de parámetros dinámicos
             pstmt.setInt(1, idAuto());
             pstmt.setString(2, coche.getMarca());
-            pstmt.setString(3, coche.getAnno().toString()); // Guarda la fecha como String
+            pstmt.setString(3, coche.getAnno().toString());// Guarda la fecha como String
+            pstmt.setString(4, coche.getUserid());
             pstmt.executeUpdate();
             System.out.println("Se a introducido");
             return true;

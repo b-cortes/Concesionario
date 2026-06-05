@@ -1,9 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.PasswordField?>
@@ -13,12 +10,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<VBox alignment="CENTER" spacing="20.0" prefHeight="600.0" prefWidth="500.0"
+<VBox alignment="CENTER"
+      spacing="20.0"
+      prefHeight="600.0"
+      prefWidth="500.0"
       xmlns="http://javafx.com/javafx/17.0.12"
       xmlns:fx="http://javafx.com/fxml/1"
       fx:controller="com.example.concesionario.Controllers.LoginController"
       stylesheets="@css/Concesionario.css"
       style="-fx-background-color: #1a1a1a;">
+
+    <padding>
+        <Insets top="30" right="30" bottom="30" left="30"/>
+    </padding>
 
     <ImageView fitWidth="250.0" preserveRatio="true" smooth="true">
         <image>
@@ -26,56 +30,20 @@
         </image>
     </ImageView>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.text.*?>
-
-<VBox alignment="CENTER"
-      spacing="12"
-      fillWidth="true"
-      stylesheets="@css/Concesionario.css"
-      xmlns="http://javafx.com/javafx/17.0.12"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.example.concesionario.Controllers.LoginController">
-
-    <padding>
-        <Insets top="30" right="30" bottom="30" left="30"/>
-    </padding>
-
     <Label text="Login" styleClass="label-titulo">
         <font>
             <Font name="SimSun" size="45.0" />
         </font>
     </Label>
+
     <TextField fx:id="txtUser" maxWidth="300.0" promptText="Usuario" />
 
     <PasswordField fx:id="txtPassword" maxWidth="300.0" promptText="Contraseña" />
 
-    <Button text="Entrar" onAction="#onLoginButtonClick" minWidth="120.0" />
+    <Button text="Entrar" onAction="#onLoginButtonClick" minWidth="120.0" maxWidth="300.0" />
 
-    <Button text="Salir" onAction="#onSalirButtonClick" minWidth="120.0" />
+    <Button text="Salir" onAction="#onSalirButtonClick" minWidth="120.0" maxWidth="300.0" />
 
     <Label fx:id="lblError" styleClass="label-error" />
-
-</VBox>
-    <TextField fx:id="txtUser"
-               promptText="Usuario"
-               maxWidth="Infinity" />
-
-    <PasswordField fx:id="txtPassword"
-                   promptText="Contraseña"
-                   maxWidth="Infinity" />
-
-    <Button text="Entrar"
-            onAction="#onLoginButtonClick"
-            maxWidth="Infinity" />
-
-    <Button text="Salir"
-            onAction="#onSalirButtonClick"
-            maxWidth="Infinity" />
-
-    <Label fx:id="lblError"
-           styleClass="label-error" />
 
 </VBox>

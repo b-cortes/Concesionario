@@ -1,62 +1,55 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox alignment="TOP_CENTER"
-      spacing="12"
-      fillWidth="true"
-      stylesheets="@css/Concesionario.css"
-      xmlns="http://javafx.com/javafx/17.0.12"
-      xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="com.example.concesionario.Controllers.CrudController">
+<VBox alignment="TOP_CENTER" fillWidth="true" spacing="12" stylesheets="@css/Concesionario.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.concesionario.Controllers.CrudController">
 
     <padding>
-        <Insets top="30" right="30" bottom="30" left="30"/>
+        <Insets bottom="30" left="30" right="30" top="30" />
     </padding>
 
-    <Label text="Concesionario" styleClass="label-titulo">
+    <Label styleClass="label-titulo" text="Concesionario">
         <font>
             <Font name="SimSun" size="45.0" />
         </font>
     </Label>
 
-    <Label fx:id="lblError" styleClass="label-error"/>
+    <Label fx:id="lblError" styleClass="label-error" />
 
-    <VBox spacing="8" fillWidth="true" VBox.vgrow="ALWAYS">
+    <VBox fillWidth="true" spacing="8" VBox.vgrow="ALWAYS">
         <padding>
-            <Insets top="10" right="10" bottom="10" left="10"/>
+            <Insets bottom="10" left="10" right="10" top="10" />
         </padding>
         <Label text="Añadir coche" />
-        <TextField fx:id="txtBastidor" promptText="ID" maxWidth="Infinity" />
-        <TextField fx:id="txtMarca" promptText="Nombre Marca" maxWidth="Infinity" />
-        <DatePicker fx:id="dpAnno" promptText="Año" maxWidth="Infinity" />
-        <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Añadir" maxWidth="Infinity" />
+        <TextField fx:id="txtMarca" maxWidth="Infinity" promptText="Nombre Marca" />
+        <DatePicker fx:id="dpAnno" maxWidth="Infinity" promptText="Año" />
+        <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onAddButtonClick" text="Añadir" />
     </VBox>
 
-    <VBox spacing="8" fillWidth="true" VBox.vgrow="ALWAYS">
+    <VBox fillWidth="true" spacing="8" VBox.vgrow="ALWAYS">
         <padding>
-            <Insets top="10" right="10" bottom="10" left="10"/>
+            <Insets bottom="10" left="10" right="10" top="10" />
         </padding>
         <Label text="Eliminar Coche" />
-        <TextField fx:id="txtBastidor3" promptText="ID" maxWidth="Infinity" />
-        <Button mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Eliminar" maxWidth="Infinity" />
+        <TextField fx:id="txtBastidor3" maxWidth="Infinity" promptText="ID" />
+        <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onDeleteButtonClick" text="Eliminar" />
     </VBox>
 
-    <VBox spacing="8" fillWidth="true" VBox.vgrow="ALWAYS">
+    <VBox fillWidth="true" spacing="8" VBox.vgrow="ALWAYS">
         <padding>
-            <Insets top="10" right="10" bottom="10" left="10"/>
+            <Insets bottom="10" left="10" right="10" top="10" />
         </padding>
         <Label text="Actualizar Coche" />
-        <TextField fx:id="txtBastidor2" promptText="ID" maxWidth="Infinity" />
-        <TextField fx:id="txtMarca2" promptText="Marca" maxWidth="Infinity" />
-        <DatePicker fx:id="dpAnno2" promptText="Año" maxWidth="Infinity" />
-        <Button mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Actualizar" maxWidth="Infinity" />
+        <TextField fx:id="txtBastidor2" maxWidth="Infinity" promptText="ID" />
+        <TextField fx:id="txtMarca2" maxWidth="Infinity" promptText="Marca" />
+        <DatePicker fx:id="dpAnno2" maxWidth="Infinity" promptText="Año" />
+        <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onUpdateButtonClick" text="Actualizar" />
     </VBox>
 
-    <Button mnemonicParsing="false" onAction="#onVerListaButtonClick" text="Ver Lista" maxWidth="Infinity" />
-    <Button mnemonicParsing="false" onAction="#onSalirButtonClick" text="Salir" maxWidth="Infinity" />
+    <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onVerListaButtonClick" text="Ver Lista" />
+    <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onSalirButtonClick" text="Salir" />
 
 </VBox>
