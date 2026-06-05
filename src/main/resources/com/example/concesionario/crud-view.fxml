@@ -24,15 +24,9 @@
             <Insets bottom="10" left="10" right="10" top="10" />
         </padding>
         <Label text="Añadir coche" />
-<<<<<<< HEAD
         <TextField fx:id="txtMarca" maxWidth="Infinity" promptText="Nombre Marca" />
         <DatePicker fx:id="dpAnno" maxWidth="Infinity" promptText="Año" />
         <Button maxWidth="Infinity" mnemonicParsing="false" onAction="#onAddButtonClick" text="Añadir" />
-=======
-        <TextField fx:id="txtMarca" promptText="Nombre Marca" maxWidth="Infinity" />
-        <DatePicker fx:id="dpAnno" promptText="Año" maxWidth="Infinity" />
-        <Button mnemonicParsing="false" onAction="#onAddButtonClick" text="Añadir" maxWidth="Infinity" />
->>>>>>> a4cd8c14d4e7670d0bc10a36c21c09e589a814ab
     </VBox>
 
     <VBox fillWidth="true" spacing="8" VBox.vgrow="ALWAYS">

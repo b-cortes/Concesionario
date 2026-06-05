@@ -69,13 +69,10 @@ public class ConcesionarioDAOImp implements ConcesionarioDAO {
             //Asignación de parámetros dinámicos
             pstmt.setInt(1, idAuto());
             pstmt.setString(2, coche.getMarca());
-<<<<<<< HEAD
             pstmt.setString(3, coche.getAnno().toString());// Guarda la fecha como String
             pstmt.setString(4, coche.getUserid());
-=======
             pstmt.setString(3, coche.getAnno().toString()); // Guarda la fecha como String
             pstmt.setString(4, coche.getUserid()); // Asigna el usuario propietario del coche
->>>>>>> a4cd8c14d4e7670d0bc10a36c21c09e589a814ab
             pstmt.executeUpdate();
             System.out.println("Se a introducido");
             return true;
