@@ -25,7 +25,8 @@ public class CrearTablas {
         String login  = """
                         CREATE TABLE login (
                         user TEXT NOT NULL PRIMARY KEY,
-                        password TEXT NOT NULL);
+                        password TEXT NOT NULL
+                        );
                 """;
         // try-with-resources para asegurar el cierre del Statement tras ejecutar la consulta DDL
         try (Statement statement = connection.createStatement()) {
@@ -38,7 +39,8 @@ public class CrearTablas {
                                CREATE TABLE concesionario (
                                numBastidor NUMBER NOT NULL PRIMARY KEY,
                                marca TEXT NOT NULL,
-                               anno DATE NOT NULL
+                               anno DATE NOT NULL,
+                               userid TEXT NOT NULL
                                );
                  """;
         // Se abre un nuevo Statement aislado para la segunda operación

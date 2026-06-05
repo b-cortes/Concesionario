@@ -1,6 +1,7 @@
 package com.example.concesionario.Controllers;
 
 import com.example.concesionario.LoginAplication;
+import com.example.concesionario.Sesion;
 import com.example.concesionario.dao.ConcesionarioDAO;
 import com.example.concesionario.dao.Impl.ConcesionarioDAOImp;
 import javafx.collections.FXCollections;
@@ -71,8 +72,8 @@ public class ListaController implements Initializable {
 
     private void cargarDatos() {
 
-        // Recupera la lista estándar de la base de datos
-        List<Concesionario> lista = cocheDAO.getAllCoches();
+        // Recupera los coches del usuario logueado
+        List<Concesionario> lista = cocheDAO.getCochesByUserId(Sesion.getUserId());
 
         // Convierte la List en un ObservableList para que la tabla pueda escuchar los cambios
         ObservableList<Concesionario> obsList = FXCollections.observableArrayList(lista);

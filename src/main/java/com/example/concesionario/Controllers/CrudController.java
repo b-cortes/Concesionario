@@ -2,6 +2,7 @@ package com.example.concesionario.Controllers;
 
 import BaseDatos.Conexion;
 import com.example.concesionario.LoginAplication;
+import com.example.concesionario.Sesion;
 import com.example.concesionario.dao.ConcesionarioDAO;
 import com.example.concesionario.dao.Impl.ConcesionarioDAOImp;
 import javafx.application.Platform;
@@ -65,6 +66,7 @@ public class CrudController {
 
             // Instancia un nuevo coche con los datos capturados
             Concesionario coche = new Concesionario(marca, anno);
+            coche.setUserid(Sesion.getUserId());
 
             // Persiste el coche en la base de datos
             cocheDAO.addCoche(coche);
